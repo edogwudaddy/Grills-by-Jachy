@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background: rgba(129, 54, 54, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f4f4f4;
+}
+
+/* NAV BAR STYLE */
+nav {
+  display: flex;
+  justify-content: space-between; /* spaces logo and menu apart */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 40px;
+}
+
+
+/* THE MENU LIST */
+nav ul {
+  list-style: none;
+  display: flex; /* makes them line up in one line */
+  gap: 30px; /* gives space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+/* MENU LINKS */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+/* UNDERLINE EFFECT */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f87e05;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+
+/* This part makes the line appear when you hover or click */
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+
+.hero {
+  height: 100vh;
+  background: url('image/61819f2976f87a51333444a2f9b923ad.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 47, 47, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.order-btn {
+  background: #f4c430;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: white;
+  box-shadow: 0 0 30px rgba(243, 156, 18, 0.8);
+}
+
+
+/* For a nice, stylish font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap');
+
+.about {
+  position: relative;
+  padding: 20px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* background image fade */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('image/1cba2c21c7c2eed9a9dc226c3a5f7f4a.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+/* Title style */
+.about h2 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  color: #FFD700;
+  letter-spacing: 2px;
+}
+
+/* First letter color */
+.about p::first-letter {
+  color: #00FF99;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Product grid */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Product box */
+.product-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 240px;
+}
+
+.product-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.product-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-box p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between logo and name */
+  font-size: 20px;
+  color: white; /* change if your background is white */
+  font-weight: bold;
+}
+
+.small-logo {
+  width: 70px;  /* make it small */
+  height: 50px;
+  border-radius: 150%; /* make it round if you like */
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* small glow */
+  box-decoration-break: clone;
+  
+}
+
+.contact-section {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section h2 {
+  color: orange;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-info, .contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  color: orange;
+  margin-bottom: 5px;
+}
+
+.contact-info p a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info p a:hover {
+  color: orange;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.contact-form button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background: darkorange;
+}

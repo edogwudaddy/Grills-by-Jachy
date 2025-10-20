@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+  <title>Grills By Jachy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>
+        <img src="image/file_000000007ffc6246993666067473cc04-removebg-preview.png" alt="Grills By JachyLogo" class="small-logo">
+        <div class="logo">Jachy Sport</div>
+    </h1> 
+    <nav>
+      <ul>
+        <li><a href="#"><b>Home</b></a></li>
+        <li><a href="#"><b>About Us</b></a></li>
+        <li><a href="#"><b>Contact Us</b></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Grills By Jachy</h1>
+      <p>Your one-stop spot for tasty fish, chicken, and chips!</p>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
+  </section>
+
+<!-- 🔹 About Us Section -->
+<section id="about" class="about">
+  <div class="about-content">
+    <h2>About Us</h2>
+
+    <p>
+      <i> <strong> Welcome to Grills By Jachy</strong> <br></i> 
+      The home of delicious fish, chicken, potatoes, and chips — all freshly prepared with love.
+      At Jachy Sport, we believe food is not just what you eat — it’s an experience.
+      Every meal is made with clean hands, fresh ingredients, and a touch of that Naija flavor you can’t find anywhere else. Whether you’re craving something spicy, crispy, or soft, we’ve got you covered.
+      We don’t just serve food — we serve happiness, energy, and love in every bite.
+      So next time you’re hungry, remember Jachy Sport Kitchen got your back!
+      Order today and taste the difference!
+    </p>
+  </div>
+
+  <div class="product-gallery">
+    <div class="product-box">
+      <img src="image/t.jpg" alt="Sneakers">
+      <p><i>Barbecue Catfish</i></p>
+    </div>
+    <div class="product-box">
+      <img src="image/gizzad.jpg" alt="Jersey">
+      <p><i>Gizzard</i></p>
+    </div>
+    <div class="product-box">
+      <img src="image/6.jpg" alt="Cap">
+      <p><I>Peppered Snails</I></p>
+    </div>
+    <div class="product-box">
+      <img src="image/5.jpg" alt="Boot">
+      <p><I>Jollof Rice</I></p>
+    </div>
+    <div class="product-box">
+      <img src="image/Croaker.jpg" alt="Gloves">
+      <p><i>Croaker</i></p>
+    </div>
+    <div class="product-box">
+      <img src="image/Roasted Plantain.jpg" alt="Ball">
+      <p><I>Roasted Plantain</I></p>
+    </div>
+    <div class="product-box">
+      <img src="image/2.jpg" alt="Bag">
+      <p><I>Grilled Turkey Wings</I></p>
+    </div>
+    <div class="product-box">
+      <img src="image/Asa Fush.jpg" alt="Socks">
+      <p><i>Asa Fish</i></p>
+    </div>
+    <div class="product-box">
+      <img src="image/r.jpg" alt="Water Bottle">
+      <p><I>chips and egg</I></p>
+    </div>
+    <div class="product-box">
+      <img src="image/Grilled Guinea Fowl.jpg" alt="Water Bottle">
+      <p><I>Grilled Guinea Fowl</I></p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Reach out to us for orders, questions, or feedback.</p>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>📍 Address</h3>
+      <p>Heroes Garden, Opp. Supermarket, Dawaki Abuja, Nigeria</p>
+
+      <h3>📞 Phone</h3>
+      <p><a href="tel:+2348084128402 ">+2348084128402</a></p>
+
+      <h3>💬 WhatsApp</h3>
+      <p><a href="https://wa.me/+2348084128402 ">Chat on WhatsApp</a></p>
+
+      <h3>📧 Email</h3>
+      <p><a href="mailto:jachinmaobinnaya@gmail.com">jachinmaobinnaya@gmail.com</a></p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+  <form onsubmit="sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Your Phone Number" required>
+  <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit">Send Message on WhatsApp</button>
+</form>
+  <script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+
+    let fullMessage = `Hello! My name is ${name}, phone: ${phone}. Message: ${message}`;
+    let whatsappNumber = "+2348084128402 "; // 👈 replace with your sister’s WhatsApp number
+
+    let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(url, "_blank");
+  }
+</script>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
